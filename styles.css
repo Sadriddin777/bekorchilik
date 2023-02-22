@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.square-1 {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: red;
+  box-shadow: 0 0 10px red, 0 0 40px red, 0 0 60px red, 0 0 80px red, 0 0 100px red;
+  filter: blur(4px);
+  animation: 0.1s animate linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(-360deg);
+  }
+}
+.square-1::after {
+  content: "";
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 96%;
+  height: 96%;
+  background-color: black;
+  z-index: 2;
+}
+
+.square-2 {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: red;
+  box-shadow: 0 0 10px red, 0 0 40px red, 0 0 60px red, 0 0 80px red, 0 0 100px red;
+  filter: blur(4px);
+  transform: rotate(-135deg);
+}
+
+.square-2::after {
+  content: "";
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 96%;
+  height: 96%;
+  background-color: black;
+  z-index: 2;
+}
+
+.left {
+  animation: 100ms anim linear infinite;
+}
+
+@keyframes anim {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
